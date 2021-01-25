@@ -1,0 +1,9 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "This is the first frontend project",
+  "main": "index.js",
+  "repository": "https://github.com/JaZZim/frontend-project-lvl1.git",
+  "author": "Anton Nikulin <hotjazzim@gmail.com>",
+  "license": "MIT"
+}
