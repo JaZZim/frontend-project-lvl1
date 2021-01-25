@@ -6,5 +6,8 @@
   "repository": "https://github.com/JaZZim/frontend-project-lvl1.git",
   "author": "Anton Nikulin <hotjazzim@gmail.com>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "bin": {
+    "brain-games": "./bin/brain-games.js"
+  }
 }
