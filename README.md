@@ -3,3 +3,5 @@
 
 #### Brain game #1: Game even
 [![asciicast](https://asciinema.org/a/387211.svg)](https://asciinema.org/a/387211)
+#### Brain game #2: Game calc
+[![asciicast](https://asciinema.org/a/387366.svg)](https://asciinema.org/a/387366)
