@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import brainEvenGame from '../src/games/even.js';
-import sayHelloAndGetUserName from '../src/cli.js';
+import runGame from '../src/games/even.js';
 
-const playerName = sayHelloAndGetUserName();
-brainEvenGame(playerName);
+runGame();
