@@ -5,3 +5,5 @@
 [![asciicast](https://asciinema.org/a/387211.svg)](https://asciinema.org/a/387211)
 #### Brain game #2: Game calc
 [![asciicast](https://asciinema.org/a/387366.svg)](https://asciinema.org/a/387366)
+#### Brain game #3: Find the greatest common divisor
+[![asciicast](https://asciinema.org/a/8vjCAPct54KLkDE00A9AU68pd.svg)](https://asciinema.org/a/8vjCAPct54KLkDE00A9AU68pd)
