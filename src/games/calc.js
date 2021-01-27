@@ -3,14 +3,14 @@ import runGameEngine from '../index.js';
 
 const gameRules = 'What is the result of the expression?';
 
-const getCurrectAnswer = (operator, firstArgument, secondArgument) => {
+const calc = (operator, firstArgument, secondArgument) => {
   switch (operator) {
     case '-':
-      return `${firstArgument - secondArgument}`;
+      return firstArgument - secondArgument;
     case '*':
-      return `${firstArgument * secondArgument}`;
+      return firstArgument * secondArgument;
     default:
-      return `${firstArgument + secondArgument}`;
+      return firstArgument + secondArgument;
   }
 };
 
@@ -19,9 +19,9 @@ const getCalcConditions = () => {
   const randomOperator = operators[getRandomInt(0, 2)];
   const firstArgument = getRandomInt(1, 50);
   const secondArgument = getRandomInt(1, 50);
-  const correctAnswer = getCurrectAnswer(randomOperator, firstArgument, secondArgument);
+  const correctAnswer = calc(randomOperator, firstArgument, secondArgument);
   const question = `${firstArgument} ${randomOperator} ${secondArgument}`;
-  return [question, correctAnswer];
+  return [question, `${correctAnswer}`];
 };
 
 export default () => runGameEngine(gameRules, getCalcConditions);
