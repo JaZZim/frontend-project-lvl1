@@ -16,7 +16,7 @@ const isPrime = (num) => {
 };
 
 const getPrimeConditions = () => {
-  const randomNumber = getRandomInt(1, 50);
+  const randomNumber = getRandomInt();
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, `${correctAnswer}`];
 };

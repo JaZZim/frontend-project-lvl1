@@ -16,9 +16,9 @@ const calc = (operator, firstArgument, secondArgument) => {
 
 const getCalcConditions = () => {
   const operators = ['+', '-', '*'];
-  const randomOperator = operators[getRandomInt(0, 2)];
-  const firstArgument = getRandomInt(1, 50);
-  const secondArgument = getRandomInt(1, 50);
+  const randomOperator = operators[getRandomInt(0, operators.length - 1)];
+  const firstArgument = getRandomInt();
+  const secondArgument = getRandomInt();
   const correctAnswer = calc(randomOperator, firstArgument, secondArgument);
   const question = `${firstArgument} ${randomOperator} ${secondArgument}`;
   return [question, `${correctAnswer}`];

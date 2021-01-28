@@ -13,8 +13,8 @@ const calcGcd = (firstArgument, secondArgument) => {
 };
 
 const getGcdConditions = () => {
-  const firstArgument = getRandomInt(1, 30);
-  const secondArgument = getRandomInt(1, 30);
+  const firstArgument = getRandomInt();
+  const secondArgument = getRandomInt();
   const correctAnswer = calcGcd(firstArgument, secondArgument);
   const question = `${firstArgument} ${secondArgument}`;
   return [question, `${correctAnswer}`];

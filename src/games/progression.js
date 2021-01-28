@@ -3,6 +3,13 @@ import runGameEngine from '../index.js';
 
 const gameRules = 'What number is missing in the progression?';
 
+const minLengthProcession = 7;
+const maxLengthProcession = 11;
+const minStepProcession = 3;
+const maxStepProcession = 7;
+const minFirstItemProcession = 1;
+const maxFirstItemProcession = 50;
+
 const getProgressionAndAnswer = (lengthProgression, stepProgression, randomPosition, firstItem) => {
   const progression = [];
   let answer;
@@ -19,10 +26,10 @@ const getProgressionAndAnswer = (lengthProgression, stepProgression, randomPosit
 };
 
 const getProgressionConditions = () => {
-  const randomLength = getRandomInt(7, 11);
+  const randomLength = getRandomInt(minLengthProcession, maxLengthProcession);
   const randomIndex = getRandomInt(0, randomLength - 1);
-  const stepProgression = getRandomInt(3, 6);
-  const firstItemProgression = getRandomInt(1, 50);
+  const stepProgression = getRandomInt(minStepProcession, maxStepProcession);
+  const firstItemProgression = getRandomInt(minFirstItemProcession, maxFirstItemProcession);
   const [question, correctAnswer] = getProgressionAndAnswer(
     randomLength,
     stepProgression,
