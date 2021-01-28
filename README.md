@@ -7,3 +7,5 @@
 [![asciicast](https://asciinema.org/a/387366.svg)](https://asciinema.org/a/387366)
 #### Brain game #3: Find the greatest common divisor
 [![asciicast](https://asciinema.org/a/8vjCAPct54KLkDE00A9AU68pd.svg)](https://asciinema.org/a/8vjCAPct54KLkDE00A9AU68pd)
+#### Brain game #4: You need to calculate the missing number in the progression.
+[![asciicast](https://asciinema.org/a/387532.svg)](https://asciinema.org/a/387532)
