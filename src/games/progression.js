@@ -1,4 +1,4 @@
-import getRandomInt from '../utils/random.js';
+import getRandomInt from '../getRandomInt.js';
 import runGameEngine from '../index.js';
 
 const gameRules = 'What number is missing in the progression?';
@@ -10,19 +10,13 @@ const maxStepProcession = 7;
 const minFirstItemProcession = 1;
 const maxFirstItemProcession = 50;
 
-const getProgressionAndAnswer = (lengthProgression, stepProgression, randomPosition, firstItem) => {
+const getProgression = (lengthProgression, stepProgression, firstItem) => {
   const progression = [];
-  let answer;
   for (let i = 0; i < lengthProgression; i += 1) {
     const item = firstItem + (i * stepProgression);
-    if (i === randomPosition) {
-      answer = item;
-      progression.push('..');
-    } else {
-      progression.push(item);
-    }
+    progression.push(item);
   }
-  return [progression.join(' '), answer];
+  return progression;
 };
 
 const getProgressionConditions = () => {
@@ -30,12 +24,11 @@ const getProgressionConditions = () => {
   const randomIndex = getRandomInt(0, randomLength - 1);
   const stepProgression = getRandomInt(minStepProcession, maxStepProcession);
   const firstItemProgression = getRandomInt(minFirstItemProcession, maxFirstItemProcession);
-  const [question, correctAnswer] = getProgressionAndAnswer(
-    randomLength,
-    stepProgression,
-    randomIndex,
-    firstItemProgression,
-  );
+
+  const progression = getProgression(randomLength, stepProgression, firstItemProgression);
+  const correctAnswer = progression[randomIndex];
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
   return [question, `${correctAnswer}`];
 };
 
