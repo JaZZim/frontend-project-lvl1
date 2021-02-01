@@ -21,4 +21,4 @@ const getGcdConditions = () => {
   return [question, `${correctAnswer}`];
 };
 
-export default () => runGameEngine(gameRules, getGcdConditions);
+export default createGame(gameRule, generateGameCondition);

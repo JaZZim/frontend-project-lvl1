@@ -18,10 +18,10 @@ const isPrime = (num) => {
   return true;
 };
 
-const getPrimeConditions = () => {
+const generateGameCondition = () => {
   const randomNumber = getRandomInt(randomMin, randomMax);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, `${correctAnswer}`];
 };
 
-export default () => runGameEngine(gameRules, getPrimeConditions);
+export default createGame(gameRule, generateGameCondition);

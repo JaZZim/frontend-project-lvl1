@@ -29,4 +29,4 @@ const getCalcConditions = () => {
   return [question, `${correctAnswer}`];
 };
 
-export default () => runGameEngine(gameRules, getCalcConditions);
+export default createGame(gameRule, generateGameCondition);

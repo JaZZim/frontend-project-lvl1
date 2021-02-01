@@ -14,4 +14,4 @@ const getEvenConditions = () => {
   return [randomNumber, correctAnswer];
 };
 
-export default () => runGameEngine(gameRules, getEvenConditions);
+export default createGame(gameRule, generateGameCondition);

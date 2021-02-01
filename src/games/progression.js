@@ -32,4 +32,4 @@ const getProgressionConditions = () => {
   return [question, `${correctAnswer}`];
 };
 
-export default () => runGameEngine(gameRules, getProgressionConditions);
+export default createGame(gameRule, generateGameCondition);
