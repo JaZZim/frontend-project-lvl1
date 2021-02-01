@@ -1,10 +1,10 @@
 import getRandomInt from '../getRandomInt.js';
-import runGameEngine from '../index.js';
+import createGame from '../index.js';
 
 const randomMin = 0;
 const randomMax = 100;
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num < 2) {

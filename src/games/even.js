@@ -1,17 +1,17 @@
 import getRandomInt from '../getRandomInt.js';
-import runGameEngine from '../index.js';
+import createGame from '../index.js';
 
 const randomMin = 0;
 const randomMax = 100;
 
 const isEven = (number) => number % 2 === 0;
 
-const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getEvenConditions = () => {
-  const randomNumber = getRandomInt(randomMin, randomMax);
-  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
-  return [randomNumber, correctAnswer];
+const generateGameCondition = () => {
+  const question = getRandomInt(randomMin, randomMax);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
 export default createGame(gameRule, generateGameCondition);

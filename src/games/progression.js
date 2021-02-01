@@ -1,7 +1,7 @@
 import getRandomInt from '../getRandomInt.js';
-import runGameEngine from '../index.js';
+import createGame from '../index.js';
 
-const gameRules = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 
 const minLengthProcession = 7;
 const maxLengthProcession = 11;
@@ -19,7 +19,7 @@ const getProgression = (lengthProgression, stepProgression, firstItem) => {
   return progression;
 };
 
-const getProgressionConditions = () => {
+const generateGameCondition = () => {
   const randomLength = getRandomInt(minLengthProcession, maxLengthProcession);
   const randomIndex = getRandomInt(0, randomLength - 1);
   const stepProgression = getRandomInt(minStepProcession, maxStepProcession);
