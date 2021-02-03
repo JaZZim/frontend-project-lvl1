@@ -18,7 +18,7 @@ const generateGameCondition = () => {
   const num2 = getRandomInt(randomMin, randomMax);
   const correctAnswer = calcGcd(num1, num2);
   const question = `${num1} ${num2}`;
-  return [question, `${correctAnswer}`];
+  return [question, correctAnswer.toString()];
 };
 
 export default createGame(gameRule, generateGameCondition);

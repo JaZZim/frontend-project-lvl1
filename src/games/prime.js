@@ -21,7 +21,7 @@ const isPrime = (num) => {
 const generateGameCondition = () => {
   const randomNumber = getRandomInt(randomMin, randomMax);
   const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-  return [randomNumber, `${correctAnswer}`];
+  return [randomNumber, correctAnswer.toString()];
 };
 
 export default createGame(gameRule, generateGameCondition);

@@ -29,7 +29,7 @@ const generateGameCondition = () => {
   const correctAnswer = progression[randomIndex];
   progression[randomIndex] = '..';
   const question = progression.join(' ');
-  return [question, `${correctAnswer}`];
+  return [question, correctAnswer.toString()];
 };
 
 export default createGame(gameRule, generateGameCondition);

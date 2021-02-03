@@ -26,7 +26,7 @@ const generateGameCondition = () => {
   const secondArgument = getRandomInt(randomMin, randomMax);
   const correctAnswer = calc(randomOperator, firstArgument, secondArgument);
   const question = `${firstArgument} ${randomOperator} ${secondArgument}`;
-  return [question, `${correctAnswer}`];
+  return [question, correctAnswer.toString()];
 };
 
 export default createGame(gameRule, generateGameCondition);
